@@ -1,4 +1,5 @@
 local lspconfig = require('lspconfig')
+local util = require('lspconfig/util')
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
@@ -63,6 +64,7 @@ lspconfig['rust_analyzer'].setup{
 lspconfig['denols'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
+    root_dir = util.root_pattern("deno.jsonc")
 }
 
 return { on_attach = on_attach }
