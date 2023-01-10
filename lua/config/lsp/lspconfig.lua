@@ -27,6 +27,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<Leader>r', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+
   local active_clients = vim.lsp.get_active_clients()
   if client.name == 'denols' then
     for _, client_ in pairs(active_clients) do
@@ -81,6 +82,11 @@ lspconfig['denols'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
     root_dir = util.root_pattern("deno.jsonc")
+}
+
+lspconfig['bashls'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
 }
 
 
