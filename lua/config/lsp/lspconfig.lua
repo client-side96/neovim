@@ -27,6 +27,22 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<Leader>r', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+  local active_clients = vim.lsp.get_active_clients()
+  if client.name == 'denols' then
+    for _, client_ in pairs(active_clients) do
+      -- stop tsserver if denols is already active
+      if client_.name == 'tsserver' then
+        client_.stop()
+      end
+    end
+  elseif client.name == 'tsserver' then
+    for _, client_ in pairs(active_clients) do
+      -- prevent tsserver from starting if denols is already active
+      if client_.name == 'denols' then
+        client.stop()
+      end
+    end
+  end
 end
 
 local lsp_flags = {}
@@ -66,5 +82,6 @@ lspconfig['denols'].setup{
     flags = lsp_flags,
     root_dir = util.root_pattern("deno.jsonc")
 }
+
 
 return { on_attach = on_attach }
