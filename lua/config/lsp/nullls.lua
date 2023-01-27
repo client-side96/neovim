@@ -10,14 +10,15 @@ nullls.setup({
   sources = {
     b.code_actions.gitsigns,
     -- JS/TS
-    b.formatting.prettier.with({
+    b.formatting.prettierd.with({
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less", "html", "json", "yaml", "graphql", "svelte" },
+    }),
+    b.formatting.deno_fmt.with({
       condition = function(utils)
         -- not for deno projects
-        return not utils.root_has_file "deno.jsonc"
+        return not utils.root_has_file "package.json"
       end,
     }),
-    b.formatting.deno_fmt,
     b.diagnostics.eslint.with({
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte" },
       condition = function(utils)
