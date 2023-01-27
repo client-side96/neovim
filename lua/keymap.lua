@@ -15,6 +15,10 @@ keymap('n', '<Leader>vv', ':vsp<CR>') -- split vertically
 
 keymap('n', '<Leader>n', ':Neotree toggle right<CR>')
 
+-- indentation in visual mode
+keymap('v', '<', '<gv')
+keymap('v', '>', '>gv')
+
 return { keymap = keymap }
 
 
