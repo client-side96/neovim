@@ -11,7 +11,7 @@ set.background = 'dark'
 set.encoding = 'utf-8'
 set.fileencoding = 'utf-8'
 set.showmode = false -- hide current mode like --INSERT--
-cmd('colorscheme gruvbox') -- set color scheme
+cmd('colorscheme nightfox') -- set color scheme
 
 -- Cursor
 set.mouse = 'a' -- enable using the mouse
