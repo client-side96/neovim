@@ -34,6 +34,7 @@ local lsp_flags = {}
 lspconfig['tsserver'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
+    root_dir = util.root_pattern("package.json")
 }
 
 lspconfig['svelte'].setup{
