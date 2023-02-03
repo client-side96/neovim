@@ -10,7 +10,7 @@ nullls.setup({
   sources = {
     b.code_actions.gitsigns,
     -- JS/TS
-    b.formatting.prettier.with({
+    b.formatting.prettierd.with({
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less", "html", "json", "yaml", "graphql", "svelte" },
       condition = function(utils)
         -- not for deno projects
