@@ -37,3 +37,14 @@ git clone git@github.com:client-side96/neovim.git
 To install the plugins listed in `./lua/plugins.lua`
 open the configuration directory with `neovim` and
 run `:PackerInstall`. Close neovim and reopen the directory.
+
+## Project structure
+
+```bash
+├── init.lua # bootstrap configuration
+├── lua/
+    ├── config/ # Directory for all plugin configurations
+    ├── keymap.lua # General keybindings
+    ├── options.lua # Vim/Neovim settings
+    └── plugins.lua # Here you can import new plugins
+```
