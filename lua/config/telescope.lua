@@ -4,6 +4,7 @@ local telescope = require('telescope')
 telescope.setup {
   defaults = {
     selection_strategy = 'follow',
+    file_ignore_patterns = { "node_modules", "dist" }
   },
   pickers = {
     find_files = {
