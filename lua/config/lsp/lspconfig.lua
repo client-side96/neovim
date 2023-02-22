@@ -59,12 +59,17 @@ lspconfig['svelte'].setup{
     flags = lsp_flags,
 }
 
+lspconfig['gopls'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+
 lspconfig['hls'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
 
-lspconfig['sumneko_lua'].setup{
+lspconfig['lua_ls'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
