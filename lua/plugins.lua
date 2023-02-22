@@ -8,6 +8,7 @@ return packer.startup(function()
   use 'ellisonleao/gruvbox.nvim'
   use 'marko-cerovac/material.nvim'
   use "EdenEast/nightfox.nvim"
+  use "rebelot/kanagawa.nvim"
 
   -- Icons
   use 'nvim-tree/nvim-web-devicons'

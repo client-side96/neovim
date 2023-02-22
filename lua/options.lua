@@ -11,7 +11,7 @@ set.background = 'dark'
 set.encoding = 'utf-8'
 set.fileencoding = 'utf-8'
 set.showmode = false -- hide current mode like --INSERT--
-cmd('colorscheme nightfox') -- set color scheme
+cmd('colorscheme kanagawa') -- set color scheme
 
 -- Cursor
 set.mouse = 'a' -- enable using the mouse
@@ -49,4 +49,3 @@ set.timeoutlen = 500 -- default is 1000
 -- Netrw
 let.loaded_netrw = 1 -- disable netrw on startup
 let.loaded_netrwPlugin = 1
-
