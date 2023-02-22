@@ -13,7 +13,9 @@ require'nvim-treesitter.configs'.setup {
     "scss",
     "svelte",
     "typescript",
-    "rust"
+    "rust",
+    "markdown",
+    "markdown_inline"
   },
   sync_install = false,
   auto_install = true,
