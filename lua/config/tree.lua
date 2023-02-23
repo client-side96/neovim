@@ -11,7 +11,7 @@ tree.setup({
   view = {
     adaptive_size = false,
     centralize_selection = false,
-    width = 30,
+    width = 45,
     hide_root_folder = false,
     side = "right",
     preserve_window_proportions = false,
