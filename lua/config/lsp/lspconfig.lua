@@ -90,6 +90,7 @@ lspconfig['lua_ls'].setup{
 lspconfig['tailwindcss'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
+    root_dir = util.root_pattern("tailwind.config.js"),
     handlers = handlers,
 }
 
