@@ -27,7 +27,9 @@ nullls.setup({
       end,
     }),
     -- Rust
-    b.formatting.rustfmt
+    b.formatting.rustfmt,
+    -- Haskell
+    b.formatting.stylish_haskell,
   },
   on_attach = lsp.on_attach
 })
