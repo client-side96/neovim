@@ -1,17 +1,13 @@
 local set = vim.opt
 local let = vim.g
-local cmd = vim.cmd
 
--- General
-let.mapleader = ','
 
 -- Color scheming
 set.termguicolors = true
-set.background = 'dark'
+set.background = 'light'
 set.encoding = 'utf-8'
 set.fileencoding = 'utf-8'
 set.showmode = false -- hide current mode like --INSERT--
-cmd('colorscheme kanagawa') -- set color scheme
 
 -- Cursor
 set.mouse = 'a' -- enable using the mouse
@@ -27,7 +23,7 @@ set.pumheight = 10 -- makes popup menu smaller
 
 -- Editor content
 set.number = true -- show line numbers
-set.relativenumber = true
+set.relativenumber = true -- relative line number for easier navigation
 set.conceallevel = 0 -- to see backticks in markdown files
 set.wrap = false -- display long lines as just one line
 -- set.list = true -- enable list characters
