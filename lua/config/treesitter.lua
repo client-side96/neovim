@@ -13,7 +13,7 @@ require'nvim-treesitter.configs'.setup {
     "scss",
     "svelte",
     "typescript",
-    "rust",
+    -- "rust",
     "markdown",
     "markdown_inline"
   },
