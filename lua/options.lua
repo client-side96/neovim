@@ -4,7 +4,7 @@ local let = vim.g
 
 -- Color scheming
 set.termguicolors = true
-set.background = 'light'
+set.background = 'dark'
 set.encoding = 'utf-8'
 set.fileencoding = 'utf-8'
 set.showmode = false -- hide current mode like --INSERT--

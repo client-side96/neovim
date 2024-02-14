@@ -1,13 +1,5 @@
 local K = require('keymap')
 local telescope = require('telescope')
-local telescopeConfig = require("telescope.config")
-
--- Clone default Telescope config
-local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) } 
-
-table.insert(vimgrep_arguments, "--hidden")
-table.insert(vimgrep_arguments, "--glob")
-table.insert(vimgrep_arguments, "!**/.git/*")
 
 telescope.setup {
   defaults = {
@@ -27,15 +19,17 @@ telescope.setup {
   extensions = {}
 }
 
-K.keymap('n', '<Leader>ff', ':Telescope find_files <CR>')
-K.keymap('n', '<Leader>fg', ':Telescope live_grep theme=ivy <CR>')
+K.keymap('n', '<Leader>f', ':Telescope find_files <CR>')
+K.keymap('n', '<Leader>b', ':Telescope buffers <CR>')
+K.keymap('n', '<Leader>/', ':Telescope live_grep theme=ivy <CR>')
 K.keymap('n', '<Leader>*', ':Telescope grep_string theme=ivy <CR>')
+K.keymap('n', '<Leader>s', ':Telescope lsp_document_symbols theme=ivy <CR>')
+K.keymap('n', '<Leader>S', ':Telescope lsp_dynamic_workspace_symbols theme=ivy <CR>')
+K.keymap('n', '<space>D', ':Telescope diagnostics theme=ivy <CR>')
 
 K.keymap('n', 'gr', ':Telescope lsp_references theme=ivy <CR>')
-K.keymap('n', 'gs', ':Telescope lsp_document_symbols theme=ivy <CR>')
 K.keymap('n', 'gi', ':Telescope lsp_implementations theme=ivy <CR>')
 K.keymap('n', 'gd', ':Telescope lsp_definitions theme=ivy <CR>')
 K.keymap('n', 'gD', ':Telescope lsp_type_definitions theme=ivy <CR>')
-K.keymap('n', '<space>e', ':Telescope diagnostics theme=ivy <CR>')
 
 

@@ -3,9 +3,9 @@ local comment = require('Comment')
 comment.setup({
   -- Comment in normal mode
   toggler = {
-    line = '<Leader>cc',
+    line = '<C-c>',
   },
   opleader = {
-    line = '<Leader>cc'
+    line = '<C-c>'
   }
 })

@@ -13,15 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
   -- Themes
-   'haishanh/night-owl.vim',
-   'ful1e5/onedark.nvim',
-   'ellisonleao/gruvbox.nvim',
-   'marko-cerovac/material.nvim',
-   "EdenEast/nightfox.nvim",
-   "rebelot/kanagawa.nvim",
-   "cocopon/iceberg.vim",
-   "rose-pine/neovim",
-   { "catppuccin/nvim", name = "catppuccin" },
+   { "rose-pine/neovim", name = "rose-pine" },
 
   -- Icons
    'nvim-tree/nvim-web-devicons',

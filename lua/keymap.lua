@@ -4,16 +4,14 @@ local function keymap(mode, combi, cmd)
   return vim.api.nvim_set_keymap(mode, combi, cmd, options)
 end
 
--- tabs
-keymap('n', '<Leader>t', ':TablineTabNew<CR>') -- open new tab
-keymap('n', '<Leader>w', ':bw<CR>') -- close new tab
-keymap('n', '<Leader><Tab>', ':TablineBufferNext<CR>') -- move to next tab
-
 -- buffers
-keymap('n', '<Leader>bb', ':sp<CR>') -- split horizontally
-keymap('n', '<Leader>vv', ':vsp<CR>') -- split vertically
+keymap('n', '<Leader>ws', ':sp<CR>') -- split horizontally
+keymap('n', '<Leader>wv', ':vsp<CR>') -- split vertically
 
-keymap('n', '<Leader>n', ':Neotree toggle right<CR>')
+-- Helix
+keymap('n', 'ge', 'G') -- move to end of file
+keymap('n', 'gs', '^') -- move to first non zero char of lin
+keymap('n', 'gl', '$') -- move to end of line
 
 -- indentation in visual mode
 keymap('v', '<', '<gv')

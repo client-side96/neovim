@@ -216,5 +216,5 @@ tree.setup({
   },
 })
 
-K.keymap('n', '<Leader>n', ':NvimTreeToggle <CR>')
+K.keymap('n', '<Leader>e', ':NvimTreeToggle <CR>')
 
