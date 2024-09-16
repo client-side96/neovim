@@ -1,9 +1,16 @@
+local lazy_config = require('config.lazy')
+
+lazy_config.init()
+
 -- General
 vim.g.mapleader = ' '
 
-require('plugins') -- external plugins installed via packer
 
-vim.cmd('colorscheme rose-pine-moon') -- set color scheme
 require('options') -- global neovim options and configurations
 
-require('keymap') -- custom key mappings
+
+lazy_config.setup()
+
+vim.cmd('colorscheme kanagawa') -- set color scheme
+
+require('keybindings') -- custom key mappings

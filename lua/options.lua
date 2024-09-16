@@ -1,7 +1,6 @@
 local set = vim.opt
 local let = vim.g
 
-
 -- Color scheming
 set.termguicolors = true
 set.background = 'dark'
@@ -42,6 +41,3 @@ set.autoindent = true -- good auto indenting
 set.updatetime = 300 -- faster completion
 set.timeoutlen = 500 -- default is 1000
 
--- Netrw
-let.loaded_netrw = 1 -- disable netrw on startup
-let.loaded_netrwPlugin = 1
